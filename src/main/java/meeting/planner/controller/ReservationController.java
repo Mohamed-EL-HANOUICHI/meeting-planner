@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import meeting.planner.dao.Room;
+import meeting.planner.entities.Room;
 import meeting.planner.requests.MeetingType;
 import meeting.planner.requests.RoomRequest;
 import meeting.planner.services.ReservationService;

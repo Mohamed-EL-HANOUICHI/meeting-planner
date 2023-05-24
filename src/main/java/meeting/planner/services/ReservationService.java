@@ -1,7 +1,8 @@
 package meeting.planner.services;
 
-import meeting.planner.dao.Room;
+import meeting.planner.entities.Room;
 import meeting.planner.requests.RoomRequest;
+
 
 public interface ReservationService {
 	

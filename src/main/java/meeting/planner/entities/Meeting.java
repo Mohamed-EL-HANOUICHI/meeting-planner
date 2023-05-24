@@ -1,4 +1,4 @@
-package meeting.planner.dao;
+package meeting.planner.entities;
 import java.time.LocalDateTime;
 
 import javax.persistence.Entity;

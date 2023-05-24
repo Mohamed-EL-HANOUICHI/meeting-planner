@@ -7,11 +7,11 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import meeting.planner.dao.Equipment;
-import meeting.planner.dao.Meeting;
 import meeting.planner.dao.MeetingServiceDao;
-import meeting.planner.dao.Room;
 import meeting.planner.dao.RoomServiceDao;
+import meeting.planner.entities.Equipment;
+import meeting.planner.entities.Meeting;
+import meeting.planner.entities.Room;
 import meeting.planner.requests.MeetingType;
 import meeting.planner.requests.RoomRequest;
 

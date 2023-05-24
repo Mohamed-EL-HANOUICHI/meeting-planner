@@ -1,4 +1,4 @@
-package meeting.planner.dao;
+package meeting.planner.entities;
 
 import java.util.List;
 

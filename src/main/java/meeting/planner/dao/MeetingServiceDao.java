@@ -6,6 +6,8 @@ import java.util.List;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
+import meeting.planner.entities.Meeting;
+
 public interface MeetingServiceDao extends CrudRepository<Meeting, Long> {
 	
 	@Query("Select * from meeting left join room on room.id = meeting.id where room.name = ?1 and startDate >= ?2 and endDate <= ?3 ")
