@@ -1,65 +1,26 @@
 package meeting.planner.entities;
 
+import lombok.Data;
+
+import javax.persistence.*;
 import java.util.List;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-
 @Entity
+@Data
 public class Room {
-	
-	@Id @GeneratedValue
-	private Long id;
-	
-	private String name;
-	private int capacity;
-	
-	@OneToMany
-	private List<Equipment> equipments;
-	
-	@OneToMany
-	private List<Meeting> meetings;
 
-	public Long getId() {
-		return id;
-	}
+    @Id
+    @GeneratedValue
+    private Long id;
+    private String name;
+    private int capacity;
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    @ElementCollection(targetClass = Equipment.class)
+    @JoinTable(name = "equipements", joinColumns = @JoinColumn(name = "id"))
+    @Enumerated(EnumType.STRING)
+    private List<Equipment> equipments;
 
-	public String getName() {
-		return name;
-	}
+    @OneToMany
+    private List<Meeting> meetings;
 
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public int getCapacity() {
-		return capacity;
-	}
-
-	public void setCapacity(int capacity) {
-		this.capacity = capacity;
-	}
-
-	public List<Equipment> getEquipments() {
-		return equipments;
-	}
-
-	public void setEquipments(List<Equipment> equipments) {
-		this.equipments = equipments;
-	}
-
-	public List<Meeting> getMeetings() {
-		return meetings;
-	}
-
-	public void setMeetings(List<Meeting> meetings) {
-		this.meetings = meetings;
-	}	
-	
 }

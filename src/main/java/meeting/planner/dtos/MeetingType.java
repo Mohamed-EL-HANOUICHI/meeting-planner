@@ -1,4 +1,4 @@
-package meeting.planner.requests;
+package meeting.planner.dtos;
 
 public enum MeetingType {
 	
